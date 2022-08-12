@@ -5,6 +5,14 @@ use Illuminate\Support\Facades\Facade;
 return [
 
     /*
+        All variables here are custom. Edit them like you want.
+    */
+    'club_name' => env('CLUB_NAME', 'Gladbacher Altherrenfans'),
+    'club_logo' => env('CLUB_LOGO', '/logo/logo.png'),
+    'team_id' => env('TEAM_ID', 87), // default = Borussia Mönchengladbach
+
+
+    /*
     |--------------------------------------------------------------------------
     | Application Name
     |--------------------------------------------------------------------------
@@ -29,6 +37,7 @@ return [
     */
 
     'env' => env('APP_ENV', 'production'),
+    'version' => '0.0.1',
 
     /*
     |--------------------------------------------------------------------------
