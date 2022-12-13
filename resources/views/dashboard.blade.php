@@ -17,7 +17,6 @@
                                 <th scope="col" class="py-3 px-6">Buchen</th>
                             </tr>
                         </thead>
-@
                         <tbody>
                             @foreach ($data as $item)
                                 @if ($item->Team1->TeamId == Config::get('app.team_id'))
@@ -38,8 +37,8 @@
                                                     {{ @$item->MatchResults[0]->PointsTeam1 }} -
                                                     {{ @$item->MatchResults[0]->PointsTeam2 }}</div>
                                                 <div class="font-normal text-gray-500">
-                                                    {{ @$item->MatchResults[1]->PointsTeam1 }} -
-                                                    {{ @$item->MatchResults[1]->PointsTeam2 }}</div>
+                                                    ({{ @$item->MatchResults[1]->PointsTeam1 }} -
+                                                    {{ @$item->MatchResults[1]->PointsTeam2 }})</div>
                                             </div>
                                         </td>
                                         <td class="items-center py-4 px-6 text-gray-900 whitespace-nowrap">
