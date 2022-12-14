@@ -38,6 +38,74 @@ namespace App\Models{
 
 namespace App\Models{
 /**
+ * Class League
+ *
+ * @property int $id
+ * @property Carbon|null $created_at
+ * @property Carbon|null $updated_at
+ * @property int $league_id
+ * @property string $league_name
+ * @package App\Models
+ * @method static \Illuminate\Database\Eloquent\Builder|League newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|League newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|League query()
+ * @method static \Illuminate\Database\Eloquent\Builder|League whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|League whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|League whereLeagueId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|League whereLeagueName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|League whereUpdatedAt($value)
+ */
+	class League extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
+ * Class Match
+ *
+ * @property int $id
+ * @property Carbon|null $created_at
+ * @property Carbon|null $updated_at
+ * @property int $league_id
+ * @property int $match_id
+ * @property Carbon $match_time
+ * @property int $team1_id
+ * @property string $team1_name
+ * @property int $team2_id
+ * @property string $team2_name
+ * @property string $group_name
+ * @property Carbon $last_update
+ * @property int $is_finished
+ * @property int $result_end_t1
+ * @property int $result_end_t2
+ * @property int $result_half_t1
+ * @property int $result_half_t2
+ * @package App\Models
+ * @method static \Illuminate\Database\Eloquent\Builder|Match_ newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Match_ newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Match_ query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Match_ whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Match_ whereGroupName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Match_ whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Match_ whereIsFinished($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Match_ whereLastUpdate($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Match_ whereLeagueId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Match_ whereMatchId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Match_ whereMatchTime($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Match_ whereResultEndT1($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Match_ whereResultEndT2($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Match_ whereResultHalfT1($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Match_ whereResultHalfT2($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Match_ whereTeam1Id($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Match_ whereTeam1Name($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Match_ whereTeam2Id($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Match_ whereTeam2Name($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Match_ whereUpdatedAt($value)
+ */
+	class Match_ extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
  * Class PasswordReset
  *
  * @property string $email
@@ -108,6 +176,28 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|Session whereUserId($value)
  */
 	class Session extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
+ * Class Setting
+ *
+ * @property int $id
+ * @property Carbon|null $created_at
+ * @property Carbon|null $updated_at
+ * @property string $option
+ * @property string $value
+ * @package App\Models
+ * @method static \Illuminate\Database\Eloquent\Builder|Setting newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Setting newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Setting query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Setting whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Setting whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Setting whereOption($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Setting whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Setting whereValue($value)
+ */
+	class Setting extends \Eloquent {}
 }
 
 namespace App\Models{
@@ -194,19 +284,55 @@ namespace App\Models{
  * @property string|null $title
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
- * @property int $season
+ * @property int|null $season
+ * @property int $league_id
  * @package App\Models
  * @method static \Illuminate\Database\Eloquent\Builder|Ticket newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Ticket newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Ticket query()
  * @method static \Illuminate\Database\Eloquent\Builder|Ticket whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Ticket whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Ticket whereLeagueId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Ticket whereOwnerId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Ticket whereSeason($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Ticket whereTitle($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Ticket whereUpdatedAt($value)
  */
 	class Ticket extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
+ * Class TicketClaim
+ *
+ * @property int $id
+ * @property Carbon|null $created_at
+ * @property Carbon|null $updated_at
+ * @property int $match_id
+ * @property int $ticket_id
+ * @property int|null $claimed_by_id
+ * @property int|null $claim_confirmend
+ * @property Carbon|null $claim_confirmed_at
+ * @property int|null $payment_confirmed
+ * @property Carbon|null $payment_confirmed_at
+ * @property int|null $payment_confirmed_by_id
+ * @package App\Models
+ * @method static \Illuminate\Database\Eloquent\Builder|TicketClaim newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|TicketClaim newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|TicketClaim query()
+ * @method static \Illuminate\Database\Eloquent\Builder|TicketClaim whereClaimConfirmedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|TicketClaim whereClaimConfirmend($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|TicketClaim whereClaimedById($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|TicketClaim whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|TicketClaim whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|TicketClaim whereMatchId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|TicketClaim wherePaymentConfirmed($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|TicketClaim wherePaymentConfirmedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|TicketClaim wherePaymentConfirmedById($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|TicketClaim whereTicketId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|TicketClaim whereUpdatedAt($value)
+ */
+	class TicketClaim extends \Eloquent {}
 }
 
 namespace App\Models{
