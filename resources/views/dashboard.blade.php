@@ -24,7 +24,7 @@
                                 @if ($item->team1_id == Config::get('app.team_id'))
                                     <tr>
                                         <td class="flex items-center py-4 px-6 text-gray-900 whitespace-nowrap">
-                                            <img class="w-10 h-10 rounded-full"
+                                            <img class="w-10 h-10 rounded-lg"
                                                 src="/images/clubs/{{ $item->team2_id }}.png" alt="Logo {{ $item->team2_name }}">
                                             <div class="pl-3">
                                                 <div class="text-base font-semibold">{{ $item->team2_name }}</div>

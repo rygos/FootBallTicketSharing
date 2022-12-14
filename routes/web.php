@@ -29,5 +29,8 @@ Route::middleware([
     Route::post('/tickets', 'App\Http\Controllers\TicketController@store')->name('ticket.store');
     Route::get('/tickets/{id}', 'App\Http\Controllers\TicketController@delete')->name('ticket.delete');
     Route::get('/tickets/share/{league_id}/{match_id}', 'App\Http\Controllers\TicketShareController@share')->name('ticket.share');
-    Route::get('tickets/booking/{league_id}/{match_id}', 'App\Http\Controllers\TicketShareController@booking')->name('ticket.booking');
+    Route::get('/tickets/booking/{league_id}/{match_id}', 'App\Http\Controllers\TicketShareController@booking')->name('ticket.booking');
+
+    Route::get('/admin/settings', 'App\Http\Controllers\AdminController@show_settings')->name('admin.settings');
+    Route::post('/admin/settings', 'App\Http\Controllers\AdminController@store_settings')->name('admin.store_settings');
 });

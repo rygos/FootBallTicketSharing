@@ -67,6 +67,7 @@ class DashboardController extends Controller
         //Settings Aktualisieren oder Default setzen wenn nich vorhanden.
         Setting::updateOrCreate(['option' => 'api_last_update'], ['value' => $lu_db_time]);
         Setting::firstOrCreate(['option' => 'booking_days_after_match', 'value' => 7]);
+        Setting::firstOrCreate(['option' => 'booking_random_ticket', 'value' => 1]);
 
         //Liga Tabelle aktualisieren
         League::updateOrCreate(['league_id' => $league_id],['league_name' => $league_name]);
