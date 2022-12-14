@@ -22,7 +22,7 @@ class AdminController extends Controller
     public function store_settings(Request $request){
         $this->validate($request, [
             'api_last_update' => 'required',
-            'booking_days_after_match' => 'required',
+            'booking_days_after_match' => 'required|numeric|max:365',
             'booking_random_ticket' => 'required',
         ]);
 
