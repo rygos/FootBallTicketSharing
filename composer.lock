@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "85a1d0fdf033418ef71801b79f308942",
+    "content-hash": "73aff7e92c221e18a13bfea546cf2f57",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -59,6 +59,70 @@
                 "source": "https://github.com/Bacon/BaconQrCode/tree/2.0.8"
             },
             "time": "2022-12-07T17:46:57+00:00"
+        },
+        {
+            "name": "barryvdh/laravel-translation-manager",
+            "version": "v0.6.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/barryvdh/laravel-translation-manager.git",
+                "reference": "b21c18afdb1315ab616005b6d33104802a405ebc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/barryvdh/laravel-translation-manager/zipball/b21c18afdb1315ab616005b6d33104802a405ebc",
+                "reference": "b21c18afdb1315ab616005b6d33104802a405ebc",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "^6|^7|^8|^9",
+                "illuminate/translation": "^6|^7|^8|^9",
+                "php": ">=7.2",
+                "symfony/finder": "^4|^5|^6"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^4|^5|^6|^7"
+            },
+            "suggest": {
+                "tanmuhittin/laravel-google-translate": "If you want to translate using Google API"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.6-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Barryvdh\\TranslationManager\\ManagerServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Barryvdh\\TranslationManager\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Barry vd. Heuvel",
+                    "email": "barryvdh@gmail.com"
+                }
+            ],
+            "description": "Manage Laravel Translations",
+            "keywords": [
+                "laravel",
+                "translations",
+                "translator"
+            ],
+            "support": {
+                "issues": "https://github.com/barryvdh/laravel-translation-manager/issues",
+                "source": "https://github.com/barryvdh/laravel-translation-manager/tree/v0.6.3"
+            },
+            "time": "2022-03-17T20:07:34+00:00"
         },
         {
             "name": "brick/math",
@@ -604,6 +668,62 @@
                 }
             ],
             "time": "2022-02-20T15:07:15+00:00"
+        },
+        {
+            "name": "glebsky/laravel-lang-generator",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Glebsky/laravel-lang-generator.git",
+                "reference": "922a1c17a1b36a58fcf72528b148886fdefdac9b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Glebsky/laravel-lang-generator/zipball/922a1c17a1b36a58fcf72528b148886fdefdac9b",
+                "reference": "922a1c17a1b36a58fcf72528b148886fdefdac9b",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/collections": ">=8.0.0",
+                "illuminate/console": ">=5.1",
+                "php": "^7.3|^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Glebsky\\LaravelLangGenerator\\LaravelLangGeneratorServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Glebsky\\LaravelLangGenerator\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "glebsky",
+                    "email": "laosdeveloper@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Searches for multilingual phrases in Laravel project and automatically generates language files for you.",
+            "keywords": [
+                "automatic translation",
+                "language",
+                "laravel",
+                "translation"
+            ],
+            "support": {
+                "issues": "https://github.com/Glebsky/laravel-lang-generator/issues",
+                "source": "https://github.com/Glebsky/laravel-lang-generator/tree/1.0.0"
+            },
+            "time": "2021-12-20T00:00:00+00:00"
         },
         {
             "name": "graham-campbell/result-type",
