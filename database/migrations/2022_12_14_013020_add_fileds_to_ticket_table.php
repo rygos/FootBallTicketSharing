@@ -13,11 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('tickets', function (Blueprint $table) {
-            $table->id();
-            $table->integer('owner_id');
-            $table->string('title')->nullable();
-            $table->timestamps();
+        Schema::table('tickets', function (Blueprint $table) {
+            $table->integer('league_id');
         });
     }
 
@@ -28,6 +25,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tickets');
+        Schema::table('tickets', function (Blueprint $table) {
+            $table->dropColumn('league_id');
+        });
     }
 };

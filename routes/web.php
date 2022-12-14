@@ -25,4 +25,9 @@ Route::middleware([
     'verified'
 ])->group(function () {
     Route::get('/dashboard', 'App\Http\Controllers\DashboardController@index')->name('dashboard');
+    Route::get('/tickets', 'App\Http\Controllers\TicketController@show')->name('ticket.show');
+    Route::post('/tickets', 'App\Http\Controllers\TicketController@store')->name('ticket.store');
+    Route::get('/tickets/{id}', 'App\Http\Controllers\TicketController@delete')->name('ticket.delete');
+    Route::get('/tickets/share/{league_id}/{match_id}', 'App\Http\Controllers\TicketShareController@share')->name('ticket.share');
+    Route::get('tickets/booking/{league_id}/{match_id}', 'App\Http\Controllers\TicketShareController@booking')->name('ticket.booking');
 });
