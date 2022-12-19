@@ -74,7 +74,7 @@ class DashboardController extends Controller
 
         $data = Match_::whereLeagueId($league_id)->get();
 
-        return view('Dashboard',[
+        return view('dashboard',[
             'data' => $data,
             'league_name' => $league_name,
         ]);
