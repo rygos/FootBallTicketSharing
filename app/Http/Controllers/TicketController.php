@@ -28,6 +28,7 @@ class TicketController extends Controller
         $ticket = new Ticket;
         $ticket->league_id = $league_id;
         $ticket->owner_id = \Auth::id();
+        $ticket->season = $league_id;
         $ticket->title = $request->post('description');
         $ticket->save();
 
